@@ -1,0 +1,42 @@
+﻿<Page x:Class="exam22stol.Development_Pages.wolker"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:exam22stol.Development_Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1300"
+      Title="wolker">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Frame x:Name="f" Navigated="f_Navigated"></Frame>
+        </Grid>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Content="Склад" Style="{StaticResource la}" HorizontalAlignment="Center" Grid.Row="0"></Label>
+            <Label Content="телефонов" Style="{StaticResource laa}" HorizontalAlignment="Center" Grid.Row="1"></Label>
+            <!--<Label Content="Редактирование" Style="{StaticResource laa}" HorizontalAlignment="Center" Grid.Row="3"></Label>-->
+            <Button Grid.Row="2" Name="foto" Click="foto_Click" Content="Перейти смотреть склад" Margin="11" Style="{StaticResource b}"></Button>
+            <Button Grid.Row="4" Name="redact" Click="redact_Click" Content="добовление расходников" Margin="11" Style="{StaticResource b}"></Button>
+        </Grid>
+    </Grid>
+</Page>

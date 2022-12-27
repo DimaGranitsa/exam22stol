@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0948b4da46c24e378820359d0f9680b7" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="web22Model.Applications" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Basket" Width="1.5" PointX="8.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Consumables" Width="1.5" PointX="8" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.customers" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Listofclients" Width="1.5" PointX="11" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Malfunctions" Width="1.5" PointX="11" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.ReconciliationReport" Width="1.5" PointX="13.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Role" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.specialty" Width="1.5" PointX="5.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.sysdiagrams" Width="1.5" PointX="2.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Telephone" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Typesoftelephone" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Warehouse" Width="1.5" PointX="10.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.worker" Width="1.5" PointX="8" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="web22Model.Сatalog" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="web22Model.FK_customers_Applications" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_Listofclients_Basket" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_Warehouse_Consumables" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_customers_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_customers_Сatalog" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_ReconciliationReport_Listofclients" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_ReconciliationReport_Malfunctions" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_worker_specialty" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_Telephone_Typesoftelephone" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_Telephone_Сatalog" ManuallyRouted="false" />
+        <AssociationConnector Association="web22Model.FK_Warehouse_worker" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
