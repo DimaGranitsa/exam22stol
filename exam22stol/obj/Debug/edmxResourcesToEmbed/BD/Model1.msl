@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище web22ModelContainer" CdmEntityContainer="web22Entities">
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="web22Model.Applications">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="ID_Applications" ColumnName="ID_Applications" />
+          <ScalarProperty Name="Applicationsinthenameofthesender" ColumnName="Applicationsinthenameofthesender" />
+          <ScalarProperty Name="ApplicationsinthenameoftheRecipient" ColumnName="ApplicationsinthenameoftheRecipient" />
+          <ScalarProperty Name="Applicationtype" ColumnName="Applicationtype" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basket">
+      <EntityTypeMapping TypeName="web22Model.Basket">
+        <MappingFragment StoreEntitySet="Basket">
+          <ScalarProperty Name="ID_Busket" ColumnName="ID_Busket" />
+          <ScalarProperty Name="Productname" ColumnName="Productname" />
+          <ScalarProperty Name="Prise" ColumnName="Prise" />
+          <ScalarProperty Name="Producttypeproducts" ColumnName="Producttypeproducts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Consumables">
+      <EntityTypeMapping TypeName="web22Model.Consumables">
+        <MappingFragment StoreEntitySet="Consumables">
+          <ScalarProperty Name="ID_Consumables" ColumnName="ID_Consumables" />
+          <ScalarProperty Name="ConsumablesName" ColumnName="ConsumablesName" />
+          <ScalarProperty Name="ID_Consumablestypes" ColumnName="ID_Consumablestypes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="web22Model.customers">
+        <MappingFragment StoreEntitySet="customers">
+          <ScalarProperty Name="ID_Customers" ColumnName="ID_Customers" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="F_Name" ColumnName="F_Name" />
+          <ScalarProperty Name="S_Name" ColumnName="S_Name" />
+          <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
+          <ScalarProperty Name="ID_Applications" ColumnName="ID_Applications" />
+          <ScalarProperty Name="ID_Catolog" ColumnName="ID_Catolog" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Passvord" ColumnName="Passvord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Listofclients">
+      <EntityTypeMapping TypeName="web22Model.Listofclients">
+        <MappingFragment StoreEntitySet="Listofclients">
+          <ScalarProperty Name="ID_Listofclients" ColumnName="ID_Listofclients" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Phonenumber" ColumnName="Phonenumber" />
+          <ScalarProperty Name="ID_Basket" ColumnName="ID_Basket" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Malfunctions">
+      <EntityTypeMapping TypeName="web22Model.Malfunctions">
+        <MappingFragment StoreEntitySet="Malfunctions">
+          <ScalarProperty Name="ID_Malfunctions" ColumnName="ID_Malfunctions" />
+          <ScalarProperty Name="Namemalfunctions" ColumnName="Namemalfunctions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReconciliationReport">
+      <EntityTypeMapping TypeName="web22Model.ReconciliationReport">
+        <MappingFragment StoreEntitySet="ReconciliationReport">
+          <ScalarProperty Name="ID_Reconciliationreport" ColumnName="ID_Reconciliationreport" />
+          <ScalarProperty Name="Theactofthesender" ColumnName="Theactofthesender" />
+          <ScalarProperty Name="Theactwasreceived" ColumnName="Theactwasreceived" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ID_Malfunctions" ColumnName="ID_Malfunctions" />
+          <ScalarProperty Name="ID_Listofclients" ColumnName="ID_Listofclients" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Role">
+      <EntityTypeMapping TypeName="web22Model.Role">
+        <MappingFragment StoreEntitySet="Role">
+          <ScalarProperty Name="ID_Role" ColumnName="ID_Role" />
+          <ScalarProperty Name="Theroleofthename" ColumnName="Theroleofthename" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="specialty">
+      <EntityTypeMapping TypeName="web22Model.specialty">
+        <MappingFragment StoreEntitySet="specialty">
+          <ScalarProperty Name="ID_specialty" ColumnName="ID_specialty" />
+          <ScalarProperty Name="Namespecialty" ColumnName="Namespecialty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="web22Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Telephone">
+      <EntityTypeMapping TypeName="web22Model.Telephone">
+        <MappingFragment StoreEntitySet="Telephone">
+          <ScalarProperty Name="ID_Telephone" ColumnName="ID_Telephone" />
+          <ScalarProperty Name="Phonenumbersname" ColumnName="Phonenumbersname" />
+          <ScalarProperty Name="ID_Tupe" ColumnName="ID_Tupe" />
+          <ScalarProperty Name="ID_Catalog" ColumnName="ID_Catalog" />
+          <ScalarProperty Name="ID_wrehouse" ColumnName="ID_wrehouse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Typesoftelephone">
+      <EntityTypeMapping TypeName="web22Model.Typesoftelephone">
+        <MappingFragment StoreEntitySet="Typesoftelephone">
+          <ScalarProperty Name="ID_Typesoftelephone" ColumnName="ID_Typesoftelephone" />
+          <ScalarProperty Name="PhoneTypesname" ColumnName="PhoneTypesname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouse">
+      <EntityTypeMapping TypeName="web22Model.Warehouse">
+        <MappingFragment StoreEntitySet="Warehouse">
+          <ScalarProperty Name="ID_Warehouse" ColumnName="ID_Warehouse" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="NameoftheConsumable" ColumnName="NameoftheConsumable" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="Shelf" ColumnName="Shelf" />
+          <ScalarProperty Name="Shelving" ColumnName="Shelving" />
+          <ScalarProperty Name="ID_Consumablestypes" ColumnName="ID_Consumablestypes" />
+          <ScalarProperty Name="ID_Wolker" ColumnName="ID_Wolker" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="worker">
+      <EntityTypeMapping TypeName="web22Model.worker">
+        <MappingFragment StoreEntitySet="worker">
+          <ScalarProperty Name="ID_worker" ColumnName="ID_worker" />
+          <ScalarProperty Name="NAme" ColumnName="NAme" />
+          <ScalarProperty Name="Telephon" ColumnName="Telephon" />
+          <ScalarProperty Name="ID_spezialnost" ColumnName="ID_spezialnost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Сatalog">
+      <EntityTypeMapping TypeName="web22Model.Сatalog">
+        <MappingFragment StoreEntitySet="Сatalog">
+          <ScalarProperty Name="ID_Catalog" ColumnName="ID_Catalog" />
+          <ScalarProperty Name="productname" ColumnName="productname" />
+          <ScalarProperty Name="producttype" ColumnName="producttype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

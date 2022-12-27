@@ -1,0 +1,40 @@
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.csproj.AssemblyReference.cache
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.csproj.SuggestedBindingRedirects.cache
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\klient.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\Owner.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\themainwindowfortheadmin.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\wolker.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\MainWindow.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\App.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol_Content.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol_MarkupCompile.cache
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol_MarkupCompile.lref
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\exam22stol.exe.config
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\exam22stol.exe
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\exam22stol.pdb
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\EntityFramework.dll
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\EntityFramework.xml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\App.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\klient.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\Owner.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\themainwindowfortheadmin.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\wolker.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\MainWindow.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.g.resources
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.Properties.Resources.resources
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.csproj.GenerateResource.cache
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.csproj.CoreCompileInputs.cache
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.csproj.CopyComplete
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.exe
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\exam22stol.pdb
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\registratia.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\Development Pages\registratia.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\telephon.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\telephon.baml
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\busket.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\licdan.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\warehose.g.cs
+C:\Users\exam_2\source\repos\exam22stol\exam22stol\obj\Debug\frame\вщищм.g.cs

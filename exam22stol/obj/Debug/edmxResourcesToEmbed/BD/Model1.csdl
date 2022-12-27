@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="web22Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Applications">
+    <Key>
+      <PropertyRef Name="ID_Applications" />
+    </Key>
+    <Property Name="ID_Applications" Type="Int32" Nullable="false" />
+    <Property Name="Applicationsinthenameofthesender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ApplicationsinthenameoftheRecipient" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Applicationtype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="customers" Relationship="Self.FK_customers_Applications" FromRole="Applications" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="Basket">
+    <Key>
+      <PropertyRef Name="ID_Busket" />
+    </Key>
+    <Property Name="ID_Busket" Type="Int32" Nullable="false" />
+    <Property Name="Productname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Prise" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Producttypeproducts" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Listofclients" Relationship="Self.FK_Listofclients_Basket" FromRole="Basket" ToRole="Listofclients" />
+  </EntityType>
+  <EntityType Name="Consumables">
+    <Key>
+      <PropertyRef Name="ID_Consumables" />
+    </Key>
+    <Property Name="ID_Consumables" Type="Int32" Nullable="false" />
+    <Property Name="ConsumablesName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Consumablestypes" Type="Int32" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK_Warehouse_Consumables" FromRole="Consumables" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="customers">
+    <Key>
+      <PropertyRef Name="ID_Customers" />
+    </Key>
+    <Property Name="ID_Customers" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="F_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="S_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Role" Type="Int32" />
+    <Property Name="ID_Applications" Type="Int32" />
+    <Property Name="ID_Catolog" Type="Int32" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Passvord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Applications" Relationship="Self.FK_customers_Applications" FromRole="customers" ToRole="Applications" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_customers_Role" FromRole="customers" ToRole="Role" />
+    <NavigationProperty Name="Сatalog" Relationship="Self.FK_customers_Сatalog" FromRole="customers" ToRole="Сatalog" />
+  </EntityType>
+  <EntityType Name="Listofclients">
+    <Key>
+      <PropertyRef Name="ID_Listofclients" />
+    </Key>
+    <Property Name="ID_Listofclients" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Basket" Type="Int32" />
+    <NavigationProperty Name="Basket" Relationship="Self.FK_Listofclients_Basket" FromRole="Listofclients" ToRole="Basket" />
+    <NavigationProperty Name="ReconciliationReport" Relationship="Self.FK_ReconciliationReport_Listofclients" FromRole="Listofclients" ToRole="ReconciliationReport" />
+  </EntityType>
+  <EntityType Name="Malfunctions">
+    <Key>
+      <PropertyRef Name="ID_Malfunctions" />
+    </Key>
+    <Property Name="ID_Malfunctions" Type="Int32" Nullable="false" />
+    <Property Name="Namemalfunctions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ReconciliationReport" Relationship="Self.FK_ReconciliationReport_Malfunctions" FromRole="Malfunctions" ToRole="ReconciliationReport" />
+  </EntityType>
+  <EntityType Name="ReconciliationReport">
+    <Key>
+      <PropertyRef Name="ID_Reconciliationreport" />
+    </Key>
+    <Property Name="ID_Reconciliationreport" Type="Int32" Nullable="false" />
+    <Property Name="Theactofthesender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Theactwasreceived" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Data" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Malfunctions" Type="Int32" />
+    <Property Name="ID_Listofclients" Type="Int32" />
+    <NavigationProperty Name="Listofclients" Relationship="Self.FK_ReconciliationReport_Listofclients" FromRole="ReconciliationReport" ToRole="Listofclients" />
+    <NavigationProperty Name="Malfunctions" Relationship="Self.FK_ReconciliationReport_Malfunctions" FromRole="ReconciliationReport" ToRole="Malfunctions" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="ID_Role" />
+    </Key>
+    <Property Name="ID_Role" Type="Int32" Nullable="false" />
+    <Property Name="Theroleofthename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="customers" Relationship="Self.FK_customers_Role" FromRole="Role" ToRole="customers" />
+  </EntityType>
+  <EntityType Name="specialty">
+    <Key>
+      <PropertyRef Name="ID_specialty" />
+    </Key>
+    <Property Name="ID_specialty" Type="Int32" Nullable="false" />
+    <Property Name="Namespecialty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="worker" Relationship="Self.FK_worker_specialty" FromRole="specialty" ToRole="worker" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Telephone">
+    <Key>
+      <PropertyRef Name="ID_Telephone" />
+    </Key>
+    <Property Name="ID_Telephone" Type="Int32" Nullable="false" />
+    <Property Name="Phonenumbersname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Tupe" Type="Int32" />
+    <Property Name="ID_Catalog" Type="Int32" />
+    <Property Name="ID_wrehouse" Type="Int32" />
+    <NavigationProperty Name="Typesoftelephone" Relationship="Self.FK_Telephone_Typesoftelephone" FromRole="Telephone" ToRole="Typesoftelephone" />
+    <NavigationProperty Name="Сatalog" Relationship="Self.FK_Telephone_Сatalog" FromRole="Telephone" ToRole="Сatalog" />
+  </EntityType>
+  <EntityType Name="Typesoftelephone">
+    <Key>
+      <PropertyRef Name="ID_Typesoftelephone" />
+    </Key>
+    <Property Name="ID_Typesoftelephone" Type="Int32" Nullable="false" />
+    <Property Name="PhoneTypesname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Telephone" Relationship="Self.FK_Telephone_Typesoftelephone" FromRole="Typesoftelephone" ToRole="Telephone" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="ID_Warehouse" />
+    </Key>
+    <Property Name="ID_Warehouse" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NameoftheConsumable" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Shelf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Shelving" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Consumablestypes" Type="Int32" />
+    <Property Name="ID_Wolker" Type="Int32" />
+    <NavigationProperty Name="Consumables" Relationship="Self.FK_Warehouse_Consumables" FromRole="Warehouse" ToRole="Consumables" />
+    <NavigationProperty Name="worker" Relationship="Self.FK_Warehouse_worker" FromRole="Warehouse" ToRole="worker" />
+  </EntityType>
+  <EntityType Name="worker">
+    <Key>
+      <PropertyRef Name="ID_worker" />
+    </Key>
+    <Property Name="ID_worker" Type="Int32" Nullable="false" />
+    <Property Name="NAme" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telephon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_spezialnost" Type="Int32" />
+    <NavigationProperty Name="specialty" Relationship="Self.FK_worker_specialty" FromRole="worker" ToRole="specialty" />
+    <NavigationProperty Name="Warehouse" Relationship="Self.FK_Warehouse_worker" FromRole="worker" ToRole="Warehouse" />
+  </EntityType>
+  <EntityType Name="Сatalog">
+    <Key>
+      <PropertyRef Name="ID_Catalog" />
+    </Key>
+    <Property Name="ID_Catalog" Type="Int32" Nullable="false" />
+    <Property Name="productname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="producttype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="customers" Relationship="Self.FK_customers_Сatalog" FromRole="Сatalog" ToRole="customers" />
+    <NavigationProperty Name="Telephone" Relationship="Self.FK_Telephone_Сatalog" FromRole="Сatalog" ToRole="Telephone" />
+  </EntityType>
+  <Association Name="FK_customers_Applications">
+    <End Role="Applications" Type="Self.Applications" Multiplicity="0..1" />
+    <End Role="customers" Type="Self.customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Applications">
+        <PropertyRef Name="ID_Applications" />
+      </Principal>
+      <Dependent Role="customers">
+        <PropertyRef Name="ID_Applications" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Listofclients_Basket">
+    <End Role="Basket" Type="Self.Basket" Multiplicity="0..1" />
+    <End Role="Listofclients" Type="Self.Listofclients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Basket">
+        <PropertyRef Name="ID_Busket" />
+      </Principal>
+      <Dependent Role="Listofclients">
+        <PropertyRef Name="ID_Basket" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_Consumables">
+    <End Role="Consumables" Type="Self.Consumables" Multiplicity="0..1" />
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consumables">
+        <PropertyRef Name="ID_Consumables" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="ID_Consumablestypes" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_customers_Role">
+    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+    <End Role="customers" Type="Self.customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="ID_Role" />
+      </Principal>
+      <Dependent Role="customers">
+        <PropertyRef Name="ID_Role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_customers_Сatalog">
+    <End Role="Сatalog" Type="Self.Сatalog" Multiplicity="0..1" />
+    <End Role="customers" Type="Self.customers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сatalog">
+        <PropertyRef Name="ID_Catalog" />
+      </Principal>
+      <Dependent Role="customers">
+        <PropertyRef Name="ID_Catolog" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReconciliationReport_Listofclients">
+    <End Role="Listofclients" Type="Self.Listofclients" Multiplicity="0..1" />
+    <End Role="ReconciliationReport" Type="Self.ReconciliationReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Listofclients">
+        <PropertyRef Name="ID_Listofclients" />
+      </Principal>
+      <Dependent Role="ReconciliationReport">
+        <PropertyRef Name="ID_Listofclients" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReconciliationReport_Malfunctions">
+    <End Role="Malfunctions" Type="Self.Malfunctions" Multiplicity="0..1" />
+    <End Role="ReconciliationReport" Type="Self.ReconciliationReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Malfunctions">
+        <PropertyRef Name="ID_Malfunctions" />
+      </Principal>
+      <Dependent Role="ReconciliationReport">
+        <PropertyRef Name="ID_Malfunctions" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_worker_specialty">
+    <End Role="specialty" Type="Self.specialty" Multiplicity="0..1" />
+    <End Role="worker" Type="Self.worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="specialty">
+        <PropertyRef Name="ID_specialty" />
+      </Principal>
+      <Dependent Role="worker">
+        <PropertyRef Name="ID_spezialnost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Telephone_Typesoftelephone">
+    <End Role="Typesoftelephone" Type="Self.Typesoftelephone" Multiplicity="0..1" />
+    <End Role="Telephone" Type="Self.Telephone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Typesoftelephone">
+        <PropertyRef Name="ID_Typesoftelephone" />
+      </Principal>
+      <Dependent Role="Telephone">
+        <PropertyRef Name="ID_Tupe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Telephone_Сatalog">
+    <End Role="Сatalog" Type="Self.Сatalog" Multiplicity="0..1" />
+    <End Role="Telephone" Type="Self.Telephone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Сatalog">
+        <PropertyRef Name="ID_Catalog" />
+      </Principal>
+      <Dependent Role="Telephone">
+        <PropertyRef Name="ID_Catalog" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Warehouse_worker">
+    <End Role="worker" Type="Self.worker" Multiplicity="0..1" />
+    <End Role="Warehouse" Type="Self.Warehouse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="worker">
+        <PropertyRef Name="ID_worker" />
+      </Principal>
+      <Dependent Role="Warehouse">
+        <PropertyRef Name="ID_Wolker" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="web22Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Applications" EntityType="Self.Applications" />
+    <EntitySet Name="Basket" EntityType="Self.Basket" />
+    <EntitySet Name="Consumables" EntityType="Self.Consumables" />
+    <EntitySet Name="customers" EntityType="Self.customers" />
+    <EntitySet Name="Listofclients" EntityType="Self.Listofclients" />
+    <EntitySet Name="Malfunctions" EntityType="Self.Malfunctions" />
+    <EntitySet Name="ReconciliationReport" EntityType="Self.ReconciliationReport" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="specialty" EntityType="Self.specialty" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Telephone" EntityType="Self.Telephone" />
+    <EntitySet Name="Typesoftelephone" EntityType="Self.Typesoftelephone" />
+    <EntitySet Name="Warehouse" EntityType="Self.Warehouse" />
+    <EntitySet Name="worker" EntityType="Self.worker" />
+    <EntitySet Name="Сatalog" EntityType="Self.Сatalog" />
+    <AssociationSet Name="FK_customers_Applications" Association="Self.FK_customers_Applications">
+      <End Role="Applications" EntitySet="Applications" />
+      <End Role="customers" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Listofclients_Basket" Association="Self.FK_Listofclients_Basket">
+      <End Role="Basket" EntitySet="Basket" />
+      <End Role="Listofclients" EntitySet="Listofclients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_Consumables" Association="Self.FK_Warehouse_Consumables">
+      <End Role="Consumables" EntitySet="Consumables" />
+      <End Role="Warehouse" EntitySet="Warehouse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_customers_Role" Association="Self.FK_customers_Role">
+      <End Role="Role" EntitySet="Role" />
+      <End Role="customers" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_customers_Сatalog" Association="Self.FK_customers_Сatalog">
+      <End Role="Сatalog" EntitySet="Сatalog" />
+      <End Role="customers" EntitySet="customers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReconciliationReport_Listofclients" Association="Self.FK_ReconciliationReport_Listofclients">
+      <End Role="Listofclients" EntitySet="Listofclients" />
+      <End Role="ReconciliationReport" EntitySet="ReconciliationReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReconciliationReport_Malfunctions" Association="Self.FK_ReconciliationReport_Malfunctions">
+      <End Role="Malfunctions" EntitySet="Malfunctions" />
+      <End Role="ReconciliationReport" EntitySet="ReconciliationReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_worker_specialty" Association="Self.FK_worker_specialty">
+      <End Role="specialty" EntitySet="specialty" />
+      <End Role="worker" EntitySet="worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Telephone_Typesoftelephone" Association="Self.FK_Telephone_Typesoftelephone">
+      <End Role="Typesoftelephone" EntitySet="Typesoftelephone" />
+      <End Role="Telephone" EntitySet="Telephone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Telephone_Сatalog" Association="Self.FK_Telephone_Сatalog">
+      <End Role="Сatalog" EntitySet="Сatalog" />
+      <End Role="Telephone" EntitySet="Telephone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Warehouse_worker" Association="Self.FK_Warehouse_worker">
+      <End Role="worker" EntitySet="worker" />
+      <End Role="Warehouse" EntitySet="Warehouse" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
